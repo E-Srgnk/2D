@@ -38,7 +38,7 @@ public class Hero : MonoBehaviour
         animator.SetFloat("AirSpeedY", rb.velocity.y);
 
         if (Input.GetButtonDown("Fire1") && timeAttack > 0.25f) Attack();
-        else if (Input.GetKeyDown("left shift")) Roll();
+        else if (isGrounded && Input.GetKeyDown("left shift")) Roll();
         else if (isGrounded && Input.GetButtonDown("Jump")) Jump();
         else if (Input.GetButton("Horizontal")) Run();    
         else State = HeroState.Idle;

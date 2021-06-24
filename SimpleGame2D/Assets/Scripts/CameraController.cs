@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform player;
     private Vector3 pos;
+    private float speed = 10f;
 
     private void Awake()
     {
@@ -18,6 +19,6 @@ public class CameraController : MonoBehaviour
         pos = player.position;
         pos.z = -7f;
         pos.y = pos.y + 2f;
-        transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime * speed);
     }
 }

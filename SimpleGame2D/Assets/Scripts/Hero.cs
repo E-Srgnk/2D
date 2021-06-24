@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class Hero : MonoBehaviour
 {
-    [SerializeField] private float speed = 3f;
+    [SerializeField] private float speed = 4f;
     [SerializeField] private float jumpForce = 7f;
     private bool isGrounded = false;
     private float timeAttack = 0f;
     private int faceDirection = 1;
-    private float rollForce = 4f;
+    private float rollForce = 6f;
 
     private Rigidbody2D rb;
     private SpriteRenderer sprite;  
